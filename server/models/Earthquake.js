@@ -7,6 +7,10 @@ const earthquakeSchema = new Schema(
     id: {
       type: mongoose.Types.ObjectId,
     },
+    username: {
+      type: String,
+      required: true,
+    },
     Date: {
       type: Date,
       get: (timestamp) => dateFormat(timestamp),
