@@ -31,6 +31,9 @@ db.once("open", async () => {
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
 
     const { username, _id: userId } = createdUsers.ops[randomUserIndex];
+    // console.log(username, userId);
+    earthquakeData.push({ username, userId });
+
     const earthquakeDate = faker.date.between(
       "2004-01-01T00:00:00.000Z",
       "2030-01-01T00:00:00.000Z"
@@ -45,8 +48,20 @@ db.once("open", async () => {
       precision: 0.1,
     });
     const Region = faker.lorem.sentence(5);
-    console.log(earthquakeDate, Latitude, Magnitude, Longitude, Depth, Region);
+    earthquakeData.push({
+      earthquakeDate,
+      Latitude,
+      Magnitude,
+      Region,
+      Longitude,
+      Depth,
+    });
+    // console.log(earthquakeDate, Latitude, Magnitude, Longitude, Depth, Region);
   }
+  const createdEarthquakes = await Earthquake.collection.insertMany(
+    earthquakeData
+  );
+  console.log(createdEarthquakes);
   console.log("all done!");
   process.exit(0);
 });
