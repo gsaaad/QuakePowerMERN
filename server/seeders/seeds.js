@@ -32,7 +32,7 @@ db.once("open", async () => {
 
     const { username, _id: userId } = createdUsers.ops[randomUserIndex];
     // console.log(username, userId);
-    earthquakeData.push({ username, userId });
+    // earthquakeData.push({ username, userId });
 
     const earthquakeDate = faker.date.between(
       "2004-01-01T00:00:00.000Z",
@@ -259,6 +259,8 @@ db.once("open", async () => {
       country_list[Math.floor(Math.random() * country_list.length)];
     // console.log(Region);
     earthquakeData.push({
+      username,
+      userId,
       earthquakeDate,
       Latitude,
       Magnitude,
@@ -271,7 +273,9 @@ db.once("open", async () => {
   const createdEarthquakes = await Earthquake.collection.insertMany(
     earthquakeData
   );
-  console.log(createdEarthquakes);
-  console.log("all done!");
+  // console.log(createdEarthquakes);
+
+  console.log(createdEarthquakes.ops, "data OP from mongo");
+  console.log("all done seeding data!");
   process.exit(0);
 });
