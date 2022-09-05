@@ -2,11 +2,22 @@
 const { gql } = require("apollo-server-express");
 
 // create our typeDefs
-// !basic typeDefs
+
 // const typeDefs = gql``;
 const typeDefs = gql`
+  type Earthquake {
+    username: String
+    Date: String
+    Latitude: Float
+    Longitude: Float
+    Magnitude: Float
+    Depth: Int
+    Region: String
+    reactionCount: Int
+  }
+
   type Query {
-    helloWorld: String
+    earthquakes: [Earthquake]
   }
 `;
 

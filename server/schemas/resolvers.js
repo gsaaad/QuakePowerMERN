@@ -1,12 +1,9 @@
 // resolves for typeDefs
-
+const { User, Earthquake } = require("../models");
 const resolvers = {
   Query: {
-    helloWorld: () => {
-      return `Hello world!
-      You've just created your first GraphQL query
-      
-      `;
+    earthquakes: async () => {
+      return Earthquake.find().sort();
     },
   },
 };
