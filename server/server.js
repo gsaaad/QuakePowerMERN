@@ -34,3 +34,6 @@ dbConnection.once("open", () => {
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
+
+// Call async function to start server
+startApolloServer(typeDefs, resolvers);

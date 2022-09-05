@@ -3,7 +3,10 @@
 const resolvers = {
   Query: {
     helloWorld: () => {
-      return `Hello world!`;
+      return `Hello world!
+      You've just created your first GraphQL query
+      
+      `;
     },
   },
 };
