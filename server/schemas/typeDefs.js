@@ -1,15 +1,14 @@
 // import GQL
 const { gql } = require("apollo-server-express");
-
 // create our typeDefs
 
 // const typeDefs = gql``;
 const typeDefs = gql`
-  scalar Date
+  scalar DateScalar
 
   type Earthquake {
     username: String
-    Date: Date!
+    Date: DateScalar
     Latitude: Float
     Longitude: Float
     Magnitude: Float
@@ -19,7 +18,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    earthquakes: [Earthquake]
+    earthquakes(username: String): [Earthquake]
   }
 `;
 
