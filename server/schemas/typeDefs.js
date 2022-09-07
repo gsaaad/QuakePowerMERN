@@ -6,7 +6,15 @@ const { gql } = require("apollo-server-express");
 const typeDefs = gql`
   scalar DateScalar
 
+  type User {
+    _id: ID
+    username: String
+    email: String
+    earthquakes: [Earthquake]
+  }
+
   type Earthquake {
+    _id: ID
     username: String
     Date: DateScalar
     Latitude: Float
@@ -15,10 +23,20 @@ const typeDefs = gql`
     Depth: Int
     Region: String
     reactionCount: Int
+    reactions: [Reaction]
+  }
+  type Reaction {
+    _id: ID
+    reactionBody: String
+    createdAt: String
+    username: String
   }
 
   type Query {
+    users: [User]
+    user(username: String!): User
     earthquakes(username: String): [Earthquake]
+    earthquake(_id: ID!): Earthquake
   }
 `;
 
