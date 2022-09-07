@@ -5,9 +5,11 @@ const { gql } = require("apollo-server-express");
 
 // const typeDefs = gql``;
 const typeDefs = gql`
+  scalar Date
+
   type Earthquake {
     username: String
-    Date: String
+    Date: Date!
     Latitude: Float
     Longitude: Float
     Magnitude: Float
