@@ -38,6 +38,10 @@ const typeDefs = gql`
     earthquakes(username: String): [Earthquake]
     earthquake(_id: ID!): Earthquake
   }
+  type Mutation {
+    login(email: String!, password: String!): User
+    addUser(username: String!, email: String!, password: String!): User
+  }
 `;
 
 // export typeDefs
