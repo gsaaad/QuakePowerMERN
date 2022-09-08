@@ -46,6 +46,15 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
+    addEarthquake(
+      username: String!
+      Latitude: Float!
+      Longitude: Float!
+      Depth: Int!
+      Magnitude: Float!
+      Region: String!
+    ): Earthquake
+    addReaction(earthquakeId: ID!, reactionBody: String!): Earthquake
   }
 `;
 

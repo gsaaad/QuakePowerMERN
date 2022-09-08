@@ -48,6 +48,43 @@ const resolvers = {
       console.log("Successful regitration!");
       return { token, user };
     },
+    // addEarthquake
+    addEarthquake: async (parent, args, context) => {
+      if (context.user) {
+        const earthquake = await Earthquake.create({
+          ...args,
+          username: context.user.username,
+        });
+        await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          {
+            $push: { earthquakes: earthquake._id },
+          },
+          { new: true }
+        );
+        return earthquake;
+      }
+      throw new AuthenticationError(
+        "You need to be Logged in to add an earthquake"
+      );
+    },
+    addReaction: async (parent, { earthquakeId, reactionBody }, context) => {
+      if (context.user) {
+        const updatedEarthquake = await Earthquake.findOneAndUpdate(
+          {
+            _id: earthquakeId,
+          },
+          {
+            $push: {
+              reactions: { reactionBody, username: context.user.username },
+            },
+          },
+          { new: true, runValidators: true }
+        );
+        return updatedEarthquake;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
     // loging in
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
