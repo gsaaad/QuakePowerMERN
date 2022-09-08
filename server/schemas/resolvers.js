@@ -8,6 +8,17 @@ const resolvers = {
   // query
   DateScalar: DateScalar,
   Query: {
+    // logging in with Auth
+    me: async (parent, args, context) => {
+      if (context.user) {
+        const userData = await User.findOne({ _id: context.user._id })
+          .select("-__v -password")
+          .populate("earthquakes");
+
+        return userData;
+      }
+      throw new AuthenticationError("not logged in");
+    },
     // all earthquakes
     earthquakes: async (parent, { username }) => {
       // return Earthquake.find().sort();
@@ -34,6 +45,7 @@ const resolvers = {
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
+      console.log("Successful regitration!");
       return { token, user };
     },
     // loging in
@@ -51,6 +63,7 @@ const resolvers = {
       }
 
       const token = signToken(user);
+      console.log("Successful login!");
       return { token, user };
     },
   },
