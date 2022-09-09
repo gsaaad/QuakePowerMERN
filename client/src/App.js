@@ -8,7 +8,12 @@ import {
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import noMatch from "./pages/NoMatch";
+import SingleEarthquake from "./pages/SingleEarthquake";
+import Profile from "./pages/Profile";
+import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 
 const httpLink = createHttpLink({
@@ -23,13 +28,23 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div className="flex-column justify-flex-start min-100-vh">
-        <Header />
-        <div className="container">
-          <Home />
+      <Router>
+        <div className="flex-column justify-flex-start min-100-vh">
+          <Header />
+          <div className="container">
+            {/* home page */}
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/earthquake" element={<SingleEarthquake />} />
+              <Route path="*" element={<noMatch />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </Router>
     </ApolloProvider>
   );
 }
