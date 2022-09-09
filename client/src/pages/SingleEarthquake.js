@@ -1,6 +1,10 @@
 import React from "react";
 
+import { useParams } from "react-router-dom";
+
 const SingleEarthquake = (props) => {
+  const { id: earthquakeId } = useParams();
+  console.log(earthquakeId);
   return (
     <div>
       <div className="card mb-3">
