@@ -19,8 +19,7 @@ const EarthquakeList = ({ earthquakes, title }) => {
                 className="text-light"
               >
                 {earthquake.username}
-              </Link>
-              {""}
+              </Link>{" "}
               entered earthquake #{earthquake._id}
             </p>
             <div className="card-body">
