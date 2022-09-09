@@ -26,7 +26,10 @@ const Profile = () => {
       </div>
 
       <div className="flex-row justify-space-between mb-3">
-        <div className="col-12 mb-3 col-lg-8">print earthquakes</div>
+        <h3 className="col-12 mb-3 col-lg-8 fs-4">
+          If you would like to inquire more about an entry that {user.username}{" "}
+          added, Please email them at {user.email}
+        </h3>
       </div>
     </div>
   );
