@@ -2,13 +2,13 @@ import React from "react";
 import ReactionList from "../components/ReactionList";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { QUERY_EARTHQUAKES } from "../utils/queries";
+import { QUERY_EARTHQUAKE } from "../utils/queries";
 
 const SingleEarthquake = (props) => {
   const { id: earthquakeId } = useParams();
   console.log(earthquakeId);
 
-  const { loading, data } = useQuery(QUERY_EARTHQUAKES, {
+  const { loading, data } = useQuery(QUERY_EARTHQUAKE, {
     variables: { id: earthquakeId },
   });
   console.log(data);
