@@ -42,3 +42,23 @@ export const QUERY_EARTHQUAKE = gql`
     }
   }
 `;
+export const QUERY_USER = gql`
+  query user($username: String!) {
+    user(username: $username) {
+      _id
+      username
+      email
+      earthquakes {
+        _id
+        username
+        Date
+        Latitude
+        Longitude
+        Magnitude
+        Depth
+        Region
+        reactionCount
+      }
+    }
+  }
+`;
