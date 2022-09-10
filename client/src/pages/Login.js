@@ -1,27 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { Store } from "react-notifications-component";
+import Auth from "../utils/authenticate";
 
-const Login = props => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+import { LOGIN_USER } from "../utils/mutations";
+const Login = (props) => {
+  const [formState, setFormState] = useState({ email: "", password: "" });
+
+  const [login, { error }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
-  const handleChange = event => {
+  const handleChange = (event) => {
     const { name, value } = event.target;
 
     setFormState({
       ...formState,
-      [name]: value
+      [name]: value,
     });
   };
 
   // submit form
-  const handleFormSubmit = async event => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // clear form values
-    setFormState({
-      email: '',
-      password: ''
-    });
+    try {
+      const { data } = await login({ variables: { ...formState } });
+
+      Store.addNotification({
+        title: "Success!",
+        message: "Login was successful!",
+        type: "success",
+        insert: "top",
+        container: "center",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: true,
+        },
+        width: 700,
+      });
+      setInterval(function () {
+        Auth.login(data.login.token);
+      }, 5000);
+
+      // clear form values
+      setFormState({
+        email: "",
+        password: "",
+      });
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   return (
@@ -53,6 +83,22 @@ const Login = props => {
                 Submit
               </button>
             </form>
+            {error &&
+              Store.addNotification({
+                title: "Failed!",
+                message:
+                  "Login was unsuccessful.. Please check your credentials.. ",
+                type: "danger",
+                insert: "top",
+                container: "center",
+                animationIn: ["animate__animated", "animate__fadeIn"],
+                animationOut: ["animate__animated", "animate__fadeOut"],
+                dismiss: {
+                  duration: 5000,
+                  onScreen: true,
+                },
+                width: 700,
+              })}
           </div>
         </div>
       </div>

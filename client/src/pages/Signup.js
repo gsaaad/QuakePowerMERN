@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import { Store } from "react-notifications-component";
+import Auth from "../utils/authenticate";
 import "animate.css/animate.compat.css";
 
 const Signup = () => {
@@ -48,6 +49,10 @@ const Signup = () => {
         },
         width: 700,
       });
+      // wait 5 seconds as user reads notification, Authenticate User + login and reload page
+      setInterval(function () {
+        Auth.login(data.addUser.token);
+      }, 5000);
 
       console.log(data);
     } catch (e) {
