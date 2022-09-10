@@ -1,21 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../utils/mutations";
+import { Store } from "react-notifications-component";
+import "animate.css/animate.compat.css";
 
 const Signup = () => {
-  const [formState, setFormState] = useState({ username: '', email: '', password: '' });
+  const [addUser, { error }] = useMutation(ADD_USER);
+
+  const [formState, setFormState] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
 
   // update state based on form input changes
-  const handleChange = event => {
+  const handleChange = (event) => {
     const { name, value } = event.target;
 
     setFormState({
       ...formState,
-      [name]: value
+      [name]: value,
     });
   };
 
   // submit form
-  const handleFormSubmit = async event => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
+
+    try {
+      const { data } = await addUser({
+        variables: { ...formState },
+      });
+      console.log("front-end: successful registration");
+      // reset form
+      setFormState({ username: "", password: "", email: "" });
+      Store.addNotification({
+        title: "Success!",
+        message: "Registration was successful!",
+        type: "success",
+        insert: "top",
+        container: "center",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: true,
+        },
+        width: 700,
+      });
+
+      console.log(data);
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   return (
@@ -56,6 +93,22 @@ const Signup = () => {
                 Submit
               </button>
             </form>
+
+            {error &&
+              Store.addNotification({
+                title: "Failed!",
+                message: "Registration was unsuccessful.. Try again",
+                type: "danger",
+                insert: "top",
+                container: "center",
+                animationIn: ["animate__animated", "animate__fadeIn"],
+                animationOut: ["animate__animated", "animate__fadeOut"],
+                dismiss: {
+                  duration: 5000,
+                  onScreen: true,
+                },
+                width: 700,
+              })}
           </div>
         </div>
       </div>

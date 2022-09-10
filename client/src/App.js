@@ -15,6 +15,8 @@ import SingleEarthquake from "./pages/SingleEarthquake";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
+import { ReactNotifications } from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
 
 const httpLink = createHttpLink({
   uri: "http://localhost:3001/graphql",
@@ -30,6 +32,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
+          <ReactNotifications />
           <Header />
           <div className="container">
             {/* home page */}
