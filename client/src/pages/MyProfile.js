@@ -1,10 +1,10 @@
 import React from "react";
 
-import { QUERY_USER } from "../utils/queries";
-import { useParams } from "react-router-dom";
+// import { QUERY_USER } from "../utils/queries";
+// import { useParams } from "react-router-dom";
 // todo add the ability to display user's earthquakes linked
 // import EarthquakeList from "../components/EarthquakeList";
-import { useQuery } from "@apollo/client";
+// import { useQuery } from "@apollo/client";
 import Auth from "../utils/authenticate";
 const MyProfile = () => {
   const getProfile = Auth.getProfile();
