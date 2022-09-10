@@ -17,13 +17,27 @@ import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import { ReactNotifications } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
+// context middle to retrive token everytime we makde a query/GraphQL request
+import { setContext } from "@apollo/client/link/context";
 
 const httpLink = createHttpLink({
   uri: "http://localhost:3001/graphql",
 });
+// authLink
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("id_token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : ``,
+    },
+  };
+});
 
+// client combines httpLink (domain), and authenticationLink with token
 const client = new ApolloClient({
-  link: httpLink,
+  link: authLink.concat(httpLink),
+
   cache: new InMemoryCache(),
 });
 

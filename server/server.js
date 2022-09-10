@@ -1,28 +1,30 @@
 const express = require("express");
+const dbConnection = require("./config/connection");
+const path = require("path");
+
 // import ApolloServer
 const { ApolloServer } = require("apollo-server-express");
-const path = require("path");
 // import typeDefs and resolvers
 const { typeDefs, resolvers } = require("./schemas");
-const dbConnection = require("./config/connection");
+// authenticate user
 const { authMiddleware } = require("./utils/authenticateUser");
 
 require("dotenv").config();
 
 const PORT = process.env.PORT || 3001;
-// create new Apollo Server
+// create new Apollo Server, use schema definitions, query resolvers, context is authorization
 const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: authMiddleware,
 });
+// app express
 const app = express();
-
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // create new instance of apollo sercer
-const startApolloServer = async (typeDefs, resolvers) => {
+const startApolloServer = async () => {
   await server.start();
   // integrate our apollo server with the express application as middleware
   server.applyMiddleware({ app });
