@@ -14,6 +14,11 @@
   --spacing-four: calc(1rem * 1.5);
   --spacing-five: calc(1rem * 3);
 }
+.form-earthquake {
+  border: 5px solid #2c1403;
+  padding: 5px;
+  border-radius: var(--border-radius);
+}
 
 * {
   box-sizing: border-box;
