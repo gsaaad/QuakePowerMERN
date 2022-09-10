@@ -62,3 +62,32 @@ export const QUERY_USER = gql`
     }
   }
 `;
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      username
+      Depth
+      Magnitude
+      Latitude
+      Longitude
+      Region
+      reactionCount
+      reactions {
+        _id
+        createdAt
+        username
+        reactionBody
+      }
+    }
+  }
+`;
+export const QUERY_ME_BASIC = gql`
+  {
+    me {
+      _id
+      username
+      email
+    }
+  }
+`;

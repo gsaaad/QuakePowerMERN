@@ -8,6 +8,7 @@ import React from "react";
 import Auth from "../utils/authenticate";
 const MyProfile = () => {
   const getProfile = Auth.getProfile();
+
   const username = getProfile.data.username;
   const useremail = getProfile.data.email;
 
@@ -23,6 +24,14 @@ const MyProfile = () => {
   //   if (loading) {
   //     return <div>Loading...</div>;
   //   }
+  if (!username) {
+    return (
+      <h2>
+        You need to be logged in to see this page. Sign up or Login to
+        continue..
+      </h2>
+    );
+  }
   return (
     <div>
       <div className="flex-row mb-3">

@@ -14,6 +14,10 @@ const Home = () => {
   return (
     <main>
       <div className="flex-row justify-space-between">
+        {/*TODO get a live feed component going */}
+        {/* this line is if you want to conditional render, and add another column to the right for live feed/ */}
+        {/* <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
+         */}
         <div className="col-12 mb-3">
           {loading ? (
             <div>Loading...</div>
