@@ -22,3 +22,6 @@ export const ADD_USER = gql`
     }
   }
 `;
+export const ADD_EARTHQUAKE = gql`
+    mutation addEarthquake($Date:String!)
+`;

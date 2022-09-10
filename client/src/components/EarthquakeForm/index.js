@@ -25,6 +25,8 @@ const EarthquakeForm = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     console.log(formState);
+    console.log(formState.Date);
+    console.log(typeof formState.Date);
   };
 
   return (
