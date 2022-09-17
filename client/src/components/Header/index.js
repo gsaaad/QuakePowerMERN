@@ -23,6 +23,7 @@ const Header = () => {
               <a href="/" onClick={logout}>
                 Logout
               </a>
+              <Link to="/deadliestearthquakes">Deadliest</Link>
             </>
           ) : (
             <>

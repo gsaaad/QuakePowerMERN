@@ -15,6 +15,7 @@ import SingleEarthquake from "./pages/SingleEarthquake";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
+import Deadliest from "./pages/Deadliest";
 import MyProfile from "./pages/MyProfile";
 import { ReactNotifications } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
@@ -61,6 +62,7 @@ function App() {
                 <Route path="" element={<Profile />} />
               </Route>
               <Route path="/myprofile" element={<MyProfile />} />
+              <Route path="/deadliestearthquakes" element={<Deadliest />} />
 
               <Route path="/earthquake/:id" element={<SingleEarthquake />} />
               <Route path="*" element={<NoMatch />} />
