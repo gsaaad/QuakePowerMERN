@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
+import { ADD_EARTHQUAKE } from "../../utils/mutations";
 
 const EarthquakeForm = () => {
   const [formState, setFormState] = useState({
@@ -10,6 +11,8 @@ const EarthquakeForm = () => {
     Magnitude: "",
     Region: "",
   });
+
+  const [addEarthquake, { error }] = useMutation(ADD_EARTHQUAKE);
 
   //   update state based on form input to add earthquake
   const handleChange = (e) => {
@@ -22,11 +25,20 @@ const EarthquakeForm = () => {
     });
   };
   //   handleForm
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     console.log(formState);
-    console.log(formState.Date);
-    console.log(typeof formState.Date);
+
+    try {
+      // add earthquake to database
+      await addEarthquake({
+        variables: { ...formState },
+      });
+      console.log("Successfull Earthquake Entry!");
+    } catch (e) {
+      console.error(e);
+      console.log("There is a problem with adding an earthquake.. Try again!");
+    }
   };
 
   return (
@@ -94,6 +106,9 @@ const EarthquakeForm = () => {
         />
         <button className="btn">Add Earthquake</button>
       </form>
+      {error && (
+        <div>There was a problem with adding earthquake entry.. Try again!</div>
+      )}
     </div>
   );
 };

@@ -23,5 +23,33 @@ export const ADD_USER = gql`
   }
 `;
 export const ADD_EARTHQUAKE = gql`
-    mutation addEarthquake($Date:String!)
+  mutation addEarthquake(
+    $Date: String!
+    $Latitude: String!
+    $Longitude: String!
+    $Depth: String!
+    $Magnitude: String!
+    $Region: String!
+  ) {
+    addEarthquake(
+      Date: $Date
+      Latitude: $Latitude
+      Longitude: $Longitude
+      Depth: $Depth
+      Magnitude: $Magnitude
+      Region: $Region
+    ) {
+      _id
+      Date
+      Latitude
+      Longitide
+      Depth
+      Magnitude
+      Region
+      reactionCount
+      reaction {
+        _id
+      }
+    }
+  }
 `;
