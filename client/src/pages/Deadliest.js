@@ -8,9 +8,28 @@ const Deadliest = () => {
   displayArea.text("Hello!");
   console.log(Earthquakes.deadliest);
 
-  Object.entries(Earthquakes.deadliest).forEach(([key, value]) => {
-    console.log(key, value);
-  });
+  const printResults = (id, Date, Year, Depth, Location, Notes, Magnitude) => {
+    const earthquakeDisplay = ` <div class="col-12 col-md-5 mb-3">
+        <div class="card p-3" data-id=${id}>
+        <h4 class="text-dark">${Location}</h4>
+        <p>ID:${id}</p>
+        <p>Date: ${Date} ${Year}<br/>
+           Depth: ${Depth}<br/>
+           Magnitude: ${Magnitude}<br/>
+           Notes: ${Notes}
+          </p>
+        </div>
+        </div>`;
+    displayArea.html(earthquakeDisplay);
+    return earthquakeDisplay;
+  };
+
+  Object.entries(Earthquakes.deadliest).forEach(
+    ([key, { id, Date, Year, Depth, Location, Notes, Magnitude }]) => {
+      console.log(key);
+      printResults(id, Date, Year, Depth, Location, Notes, Magnitude);
+    }
+  );
 
   //   const printResults = (resultArr) => {
   //     console.log(resultArr);
