@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
 const DeadliestList = ({ earthquakes, title }) => {
-  console.log(typeof earthquakes);
+  console.log(earthquakes.length, title);
   if (!earthquakes.length) {
     return <h3>No Earthquakes Yet</h3>;
   }
@@ -12,30 +11,18 @@ const DeadliestList = ({ earthquakes, title }) => {
       <h3>{title}</h3>
       {earthquakes &&
         earthquakes.map((earthquake) => (
-          <div key={earthquake._id} className="card mb-3">
-            <p className="card-header">
-              <Link
-                to={`/profile/${earthquake.username}`}
-                style={{ fontWeight: 800 }}
-                className="text-light"
-              >
-                {earthquake.username}
-              </Link>{" "}
-              entered earthquake #{earthquake._id}
-            </p>
+          <div key={earthquake.id} className="card mb-3">
             <div className="card-body">
-              <Link to={`/earthquake/${earthquake._id}`}>
-                <p>Date:{earthquake.Date}</p>
-                <p>Magnitude:{earthquake.Magnitude}</p>
-                <p>Latitude:{earthquake.Latitude}</p>
-                <p>Longitude:{earthquake.Longitude}</p>
-                <p>Depth:{earthquake.Depth}</p>
-                <p>Region:{earthquake.Region}</p>
-                <p className="mb-0">
-                  Reactions: {earthquake.reactionCount} || Click to{" "}
-                  {earthquake.reactionCount ? "see" : "start"} the discussion!
-                </p>
-              </Link>
+              <p>Earthquake ID: {earthquake.id}</p>
+              <p>
+                Date:{earthquake.Year},{earthquake.Date}
+              </p>
+              <p>Magnitude:{earthquake.Magnitude}</p>
+              <p>Latitude:{earthquake.Latitude}</p>
+              <p>Longitude:{earthquake.Longitude}</p>
+              <p>Location: {earthquake.location}</p>
+              <p>Depth:{earthquake.Depth}</p>
+              <p>Region:{earthquake.Notes}</p>
             </div>
           </div>
         ))}
