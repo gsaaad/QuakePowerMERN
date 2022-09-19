@@ -3,11 +3,11 @@ import Auth from "../utils/authenticate";
 import Earthquakes from "../data/deadliest.json";
 import $ from "jquery";
 const displayArea = $("#display-area");
+const loggedIn = Auth.loggedIn();
 const Deadliest = () => {
-  const loggedIn = Auth.loggedIn();
-
-  Object.entries(Earthquakes.deadliest).forEach(([key, earthquake]) => {
+  Object.entries(Earthquakes.deadliest).map(([key, earthquake]) => {
     console.log("this is each earthquake", key, earthquake);
+
     const earthquakeDisplay = `<div class="col-12 col-md-5 mb-3">
              <div class="card p-3" data-id=${earthquake.id}>
              <h4 class="text-dark">${earthquake.Location}</h4>

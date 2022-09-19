@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-const EarthquakeList = ({ earthquakes, title }) => {
+const DeadliestList = ({ earthquakes, title }) => {
   console.log(typeof earthquakes);
   if (!earthquakes.length) {
     return <h3>No Earthquakes Yet</h3>;
@@ -43,4 +43,4 @@ const EarthquakeList = ({ earthquakes, title }) => {
   );
 };
 
-export default EarthquakeList;
+export default DeadliestList;
