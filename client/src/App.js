@@ -17,6 +17,7 @@ import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 import Deadliest from "./pages/Deadliest";
 import MyProfile from "./pages/MyProfile";
+import Largest from "./pages/Largest";
 import { ReactNotifications } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
 // context middle to retrive token everytime we makde a query/GraphQL request
@@ -63,7 +64,7 @@ function App() {
               </Route>
               <Route path="/myprofile" element={<MyProfile />} />
               <Route path="/deadliestearthquakes" element={<Deadliest />} />
-
+              <Route path="/largestearthquakes" element={<Largest />} />
               <Route path="/earthquake/:id" element={<SingleEarthquake />} />
               <Route path="*" element={<NoMatch />} />
             </Routes>

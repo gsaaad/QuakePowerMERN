@@ -1,7 +1,7 @@
 import React from "react";
 import Earthquakes from "../data/deadliest.json";
 import DeadliestList from "../components/DeadliestList/index";
-const Deadliest = () => {
+const Largest = () => {
   const deadliestEarthquakes = Earthquakes.deadliest;
   console.log(deadliestEarthquakes);
 
@@ -26,4 +26,4 @@ const Deadliest = () => {
   );
 };
 
-export default Deadliest;
+export default Largest;

@@ -24,7 +24,7 @@ const DeadliestList = ({ earthquakes, title }) => {
               <p>Location: {earthquake.Location}</p>
               <p>Depth:{earthquake.Depth}</p>
               <p>
-                <b>Notes:{earthquake.Notes}</b>
+            <b>Notes:{earthquake.Notes}</b>
               </p>
             </div>
           </div>
