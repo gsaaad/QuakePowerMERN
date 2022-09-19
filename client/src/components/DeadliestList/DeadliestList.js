@@ -17,12 +17,15 @@ const DeadliestList = ({ earthquakes, title }) => {
               <p>
                 Date:{earthquake.Year},{earthquake.Date}
               </p>
-              <p>Magnitude:{earthquake.Magnitude}</p>
-              <p>Latitude:{earthquake.Latitude}</p>
-              <p>Longitude:{earthquake.Longitude}</p>
-              <p>Location: {earthquake.location}</p>
+              <p>
+                {" "}
+                <b>Magnitude:{earthquake.Magnitude}</b>
+              </p>
+              <p>Location: {earthquake.Location}</p>
               <p>Depth:{earthquake.Depth}</p>
-              <p>Region:{earthquake.Notes}</p>
+              <p>
+                <b>Notes:{earthquake.Notes}</b>
+              </p>
             </div>
           </div>
         ))}
