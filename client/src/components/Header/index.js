@@ -24,6 +24,7 @@ const Header = () => {
                 Logout
               </a>
               <Link to="/deadliestearthquakes">Deadliest</Link>
+              <Link to="/largestearthquakes">Largest</Link>
             </>
           ) : (
             <>
