@@ -40,6 +40,7 @@ app.get("*", (req, res) => {
 
 dbConnection.on("error", console.error.bind(console, "connection error!"));
 dbConnection.once("open", () => {
+  console.log("Connection good!, server run!");
   app.listen(PORT, () => {
     console.log(`server running on ${PORT}`);
     // log where we can go (test GQL API)

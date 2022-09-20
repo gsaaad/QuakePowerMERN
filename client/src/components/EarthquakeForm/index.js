@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_EARTHQUAKE } from "../../utils/mutations";
+import { Store } from "react-notifications-component";
 
 const EarthquakeForm = () => {
   const [formState, setFormState] = useState({
@@ -106,9 +107,27 @@ const EarthquakeForm = () => {
         />
         <button className="btn">Add Earthquake</button>
       </form>
-      {error && (
-        <div>There was a problem with adding earthquake entry.. Try again!</div>
-      )}
+      {error &&
+        (Store.addNotification({
+          title: "Warning!",
+          message:
+            "We are currently aware of this issue, and are working on it! Thank you.",
+          type: "warning",
+          insert: "bottom",
+          container: "center",
+          animationIn: ["animate__animated", "animate__fadeIn"],
+          animationOut: ["animate__animated", "animate__fadeOut"],
+          dismiss: {
+            duration: 5000,
+            onScreen: true,
+          },
+          width: 700,
+        }),
+        (
+          <div>
+            There was a problem with adding earthquake entry.. Try again!
+          </div>
+        ))}
     </div>
   );
 };
