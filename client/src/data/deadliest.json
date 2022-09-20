@@ -1,0 +1,602 @@
+{
+  "deadliest": [
+    {
+      "Year": 1960,
+      "Date": "Feb-29",
+      "Magnitude": "5.8",
+      "Location": "Morocco Souss-Massa",
+      "Depth": 15,
+      "Notes": "Worst earthquake in Moroccan history. Between 12000-15000 were killed.",
+      "EventLookup": "1960 Agadir earthquake",
+      "id": 1
+    },
+    {
+      "Year": 1961,
+      "Date": "11-Jun",
+      "Magnitude": "6.4",
+      "Location": "Iran Fars Province",
+      "Depth": 15,
+      "Notes": "60 people were killed.",
+      "EventLookup": "1961 Fars earthquake",
+      "id": 2
+    },
+    {
+      "Year": 1962,
+      "Date": "01-Sep",
+      "Magnitude": "7",
+      "Location": "Iran Qazvin Province",
+      "Depth": 10,
+      "Notes": "12225 killed and major property damage was caused.",
+      "EventLookup": "1962 Buin Zahra earthquake",
+      "id": 3
+    },
+    {
+      "Year": 1963,
+      "Date": "26-Jul",
+      "Magnitude": "6",
+      "Location": "Yugoslavia Republic of North Macedonia",
+      "Depth": 15,
+      "Notes": "1070 people perished and 80 percent of Skopje was destroyed.",
+      "EventLookup": "1963 Skopje earthquake",
+      "id": 4
+    },
+    {
+      "Year": 1964,
+      "Date": "28-Mar",
+      "Magnitude": "9.2",
+      "Location": "United States Alaska",
+      "Depth": 25,
+      "Notes": "It is the largest earthquake ever recorded in North America and the second largest in history behind only the 1960 Valdivia earthquake. 131 people were killed all but nine of them were killed by the ensuing tsunami.",
+      "EventLookup": "1964 Alaska earthquake",
+      "id": 5
+    },
+    {
+      "Year": 1965,
+      "Date": "28-Mar",
+      "Magnitude": "7.4",
+      "Location": "Chile Valparaiso Region",
+      "Depth": 70,
+      "Notes": "400 people were killed mostly due to a dam failure caused by the quake.",
+      "EventLookup": "1965 Valparaíso earthquake and the El Cobre dam failures",
+      "id": 6
+    },
+    {
+      "Year": 1966,
+      "Date": "22-Mar",
+      "Magnitude": "6.8",
+      "Location": "China Hebei",
+      "Depth": 20,
+      "Notes": "8064 killed and 38000 injured. Largest in an earthquake sequence affecting the area during the month of March that Year.",
+      "EventLookup": "1966 Xingtai earthquakes",
+      "id": 7
+    },
+    {
+      "Year": 1967,
+      "Date": "30-Jul",
+      "Magnitude": "6.6",
+      "Location": "Venezuela Vargas",
+      "Depth": 25,
+      "Notes": "225 to 300 killed and 1500+ injured. Major damage in Caracas.",
+      "EventLookup": "1967 Caracas earthquake",
+      "id": 8
+    },
+    {
+      "Year": 1968,
+      "Date": "31-Aug",
+      "Magnitude": "7.1",
+      "Location": "Iran South Khorasan Province",
+      "Depth": 10,
+      "Notes": "15900 people were killed in the earthquake and the subsequent aftershock the next day.",
+      "EventLookup": "1968 Dasht-e Bayaz and Ferdows earthquakes",
+      "id": 9
+    },
+    {
+      "Year": 1969,
+      "Date": "25-Jul",
+      "Magnitude": "6.4",
+      "Location": "China Guangdong",
+      "Depth": 20,
+      "Notes": "3000 killed. 46700 houses damaged or destroyed. Felt in Hong Kong.",
+      "EventLookup": "1969 Yangjiang earthquake",
+      "id": 10
+    },
+    {
+      "Year": 1970,
+      "Date": "31-May",
+      "Magnitude": "7.9",
+      "Location": "Peru Ancash",
+      "Depth": 45,
+      "Notes": "Worst earthquake in Peruvian history. Nearly 70000 killed. Most of the deaths occurred as a result of an avalanche.",
+      "EventLookup": "1970 Ancash earthquake",
+      "id": 11
+    },
+    {
+      "Year": 1971,
+      "Date": "22-May",
+      "Magnitude": "6.9",
+      "Location": "Turkey Bingöl",
+      "Depth": 10,
+      "Notes": "875 killed. 5583 houses heavily damaged 3418 houses moderately damaged and 3638 houses slightly damaged.[1]",
+      "EventLookup": "1971 Bingöl earthquake",
+      "id": 12
+    },
+    {
+      "Year": 1972,
+      "Date": "10-Apr",
+      "Magnitude": "6.6",
+      "Location": "Iran Fars",
+      "Depth": 10,
+      "Notes": "The estimated number of deaths is 5374 with a further 1710 injured. Some sources say the death toll is as high as 30000.",
+      "EventLookup": "1972 Qir earthquake",
+      "id": 13
+    },
+    {
+      "Year": 1973,
+      "Date": "06-Feb",
+      "Magnitude": "7.6",
+      "Location": "China Sichuan",
+      "Depth": 11,
+      "Notes": "2199 killed and 2743 injured.",
+      "EventLookup": "1973 Luhuo earthquake",
+      "id": 14
+    },
+    {
+      "Year": 1974,
+      "Date": "10-May",
+      "Magnitude": "7.1",
+      "Location": "China Yunnan",
+      "Depth": 14,
+      "Notes": "Between 1641 and 20000 were killed.",
+      "EventLookup": "1974 Zhaotong earthquake",
+      "id": 15
+    },
+    {
+      "Year": 1975,
+      "Date": "06-Sep",
+      "Magnitude": "6.7",
+      "Location": "Turkey Diyarbakir",
+      "Depth": 26,
+      "Notes": "2311 people were killed. The town of Lice was almost completely destroyed.",
+      "EventLookup": "1975 Lice earthquake",
+      "id": 16
+    },
+    {
+      "Year": 1976,
+      "Date": "28-Jul",
+      "Magnitude": "7.6",
+      "Location": "China Hebei",
+      "Depth": 12.2,
+      "Notes": "242719 people were officially counted as dead while some sources say the death toll is as high as 655000. This is the deadliest earthquake of the 20th century and the third deadliest in recorded history.",
+      "EventLookup": "1976 Tangshan earthquake",
+      "id": 17
+    },
+    {
+      "Year": 1977,
+      "Date": "04-Mar",
+      "Magnitude": "7.5",
+      "Location": "Romania Vrancea",
+      "Depth": 85.3,
+      "Notes": "1578 people were killed (1424 of them in Bucharest) and 11221 injured in Romania. In neighboring Bulgaria 120 were killed and 165 were injured while in Moldova (Moldovan SSR at the time) 2 people died.",
+      "EventLookup": "1977 Vrancea earthquake",
+      "id": 18
+    },
+    {
+      "Year": 1978,
+      "Date": "16-Sep",
+      "Magnitude": "7.4",
+      "Location": "Iran Yazd",
+      "Depth": 33,
+      "Notes": "Between 15000 and 25000 people were killed 85 percent of them coming from Tabas.",
+      "EventLookup": "1978 Tabas earthquake",
+      "id": 19
+    },
+    {
+      "Year": 1979,
+      "Date": "12-Dec",
+      "Magnitude": "8.2",
+      "Location": "Colombia Nariño",
+      "Depth": 33,
+      "Notes": "Between 300 and 600 people were killed from the combined effects of the earthquake and tsunami the latter causing most of the damage.",
+      "EventLookup": "1979 Tumaco earthquake",
+      "id": 20
+    },
+    {
+      "Year": 1980,
+      "Date": "10-Oct",
+      "Magnitude": "7.3",
+      "Location": "Algeria Chlef",
+      "Depth": 10,
+      "Notes": "Between 2633 and 5000 people were killed and between 8369 and 9000 were injured. This is the largest earthquake to hit the Atlas Mountains since 1790.",
+      "EventLookup": "1980 El Asnam earthquake",
+      "id": 21
+    },
+    {
+      "Year": 1981,
+      "Date": "June 11 and July 28",
+      "Magnitude": "6.6 & 7.1",
+      "Location": "Iran Kerman",
+      "Depth": 33,
+      "Notes": "Both earthquakes killed at least 3000 people. The two events occurred six weeks from each other.",
+      "EventLookup": "1981 Golbaf earthquake and 1981 Sirch earthquake",
+      "id": 22
+    },
+    {
+      "Year": 1982,
+      "Date": "13-Dec",
+      "Magnitude": "6.2",
+      "Location": "North Yemen Dhamar",
+      "Depth": 10,
+      "Notes": "2800 people were killed 1500 injured and 700000 homeless.",
+      "EventLookup": "1982 North Yemen earthquake",
+      "id": 23
+    },
+    {
+      "Year": 1983,
+      "Date": "30-Oct",
+      "Magnitude": "6.6",
+      "Location": "Turkey Erzurum",
+      "Depth": 15,
+      "Notes": "1340 people were killed and 50 settlements destroyed.",
+      "EventLookup": "1983 Erzurum earthquake",
+      "id": 24
+    },
+    {
+      "Year": 1984,
+      "Date": "13-Sep",
+      "Magnitude": "6.3",
+      "Location": "Japan Nagano",
+      "Depth": 2,
+      "Notes": "14 people were killed 10 were injured and 15 missing.",
+      "EventLookup": "1984 Nagano earthquake",
+      "id": 25
+    },
+    {
+      "Year": 1985,
+      "Date": "19-Sep",
+      "Magnitude": "8",
+      "Location": "Mexico Michoacan",
+      "Depth": 20,
+      "Notes": "Between 5000 and 45000 were killed and 30000 were injured. Mexico City was the worst hit despite being relatively far from the epicenter.",
+      "EventLookup": "1985 Mexico City earthquake",
+      "id": 26
+    },
+    {
+      "Year": 1986,
+      "Date": "10-Oct",
+      "Magnitude": "5.7",
+      "Location": "El Salvador San Salvador",
+      "Depth": 10,
+      "Notes": "1000-1500 were killed and 10000-20000 injured. 200000 were left homeless and extensive damage in San Salvador.",
+      "EventLookup": "1986 San Salvador earthquake",
+      "id": 27
+    },
+    {
+      "Year": 1987,
+      "Date": "06-Mar",
+      "Magnitude": "7.1",
+      "Location": "Ecuador Sucumbíos",
+      "Depth": 10,
+      "Notes": "More than 1000 were killed and 5000 missing.",
+      "EventLookup": "1987 Ecuador earthquakes",
+      "id": 28
+    },
+    {
+      "Year": 1988,
+      "Date": "07-Dec",
+      "Magnitude": "6.8",
+      "Location": "Soviet Union Armenian Soviet Socialist Republic",
+      "Depth": 5,
+      "Notes": "Between 25000 and 50000 were killed and up to 130000 were injured. An aftershock of ML 5.8 occurred shortly after. Four people were also killed in Turkey.",
+      "EventLookup": "1988 Armenian earthquake",
+      "id": 29
+    },
+    {
+      "Year": 1989,
+      "Date": "22-Jan",
+      "Magnitude": "5.3",
+      "Location": "Soviet Union Tajik Soviet Socialist Republic",
+      "Depth": 33,
+      "Notes": "More than 274 people were killed. Most of the casualties occurred due to landslides that buried three villages.",
+      "EventLookup": "1989 Gissar earthquake",
+      "id": 30
+    },
+    {
+      "Year": 1990,
+      "Date": "20-Jun",
+      "Magnitude": "7.4",
+      "Location": "Iran Gilan",
+      "Depth": 18.5,
+      "Notes": "Between 35000 and 40000 people were killed between 60000 to 108000 injured and 105000 to 450000 displaced throughout Northern Iran most especially in the Manjil-Rudbar area and in Tehran. Slight damage also occurred in Azerbaijan (part of the Soviet Union at the time).",
+      "EventLookup": "1990 Manjil-Rudbar earthquake",
+      "id": 31
+    },
+    {
+      "Year": 1991,
+      "Date": "19-Oct",
+      "Magnitude": "6.8",
+      "Location": "India Uttar Pradesh",
+      "Depth": 11.6,
+      "Notes": "Between 768 and 2000 people were killed more than 1800 injured and 18000 buildings destroyed in the Chamoli-Uttarkashi area. Some damage occurred at Chandigarh and New Delhi.[2]",
+      "EventLookup": "1991 Uttarkashi earthquake",
+      "id": 32
+    },
+    {
+      "Year": 1992,
+      "Date": "12-Dec",
+      "Magnitude": "7.8",
+      "Location": "Indonesia Flores Sea offshore",
+      "Depth": 27.7,
+      "Notes": "At least 2500 people killed or missing in the Flores region including 1490 at Maumere and 700 on Babi. More than 500 people were injured and 90000 were left homeless. Nineteen people killed and 130 houses destroyed on Kalaotoa. Severe damage with approximately 90 percent of the buildings destroyed at Maumere by the earthquake and tsunami; 50 to 80 percent of the structures on Flores were damaged or destroyed. Damage also occurred on Sumba and Alor. The tsunami on Flores ran inland as much as 300 meters with wave heights of 25 meters. Landslides and ground cracks were reported at several Locations on the island.[3]",
+      "EventLookup": "1992 Flores earthquake and tsunami",
+      "id": 33
+    },
+    {
+      "Year": 1993,
+      "Date": "29-Sep",
+      "Magnitude": "6.3",
+      "Location": "India Maharashtra",
+      "Depth": 10,
+      "Notes": "At least 9748 people were killed about 30000 were injured and extreme devastation in the Latur-Osmanabad area. Nearly all buildings were destroyed in the village of Khillari.",
+      "EventLookup": "1993 Latur earthquake",
+      "id": 34
+    },
+    {
+      "Year": 1994,
+      "Date": "06-Jun",
+      "Magnitude": "6.8",
+      "Location": "Colombia Cauca",
+      "Depth": 12.1,
+      "Notes": "At least 1100 people killed 500 missing 13000 homeless and severe damage caused to houses highways and bridges by the earthquake and ensuing landslides in Cauca Huila Tolima and Valle Departments. At least 200 homes were destroyed including 25 at Toribio and 15 at Piendamo. Moderate structural damage occurred at Bogota and Cali.",
+      "EventLookup": "1994 Páez River earthquake",
+      "id": 35
+    },
+    {
+      "Year": 1995,
+      "Date": "17-Jan",
+      "Magnitude": "6.9",
+      "Location": "Japan Kobe",
+      "Depth": 21.9,
+      "Notes": "6434 people were killed 43792 injured and extensive damage occurred in the Kobe area and on Awaji-shima. Over 90 percent of the casualties occurred along the southern coast of Honshu between Kobe and Nishinomiya. At least 28 people were killed by a landslide at Nishinomiya. About 310000 people were evacuated to temporary shelters. Over 200000 buildings were damaged or destroyed. Numerous fires gas and water main breaks and power outages occurred in the epicentral area.",
+      "EventLookup": "1995 Kobe earthquake",
+      "id": 36
+    },
+    {
+      "Year": 1996,
+      "Date": "03-Feb",
+      "Magnitude": "6.6",
+      "Location": "China Yunnan",
+      "Depth": 10,
+      "Notes": "322 people were killed and 16925 were injured. About 358000 houses collapsed and 654000 others were damaged. More than 320000 people were left homeless.",
+      "EventLookup": "1996 Lijiang earthquake",
+      "id": 37
+    },
+    {
+      "Year": 1997,
+      "Date": "10-May",
+      "Magnitude": "7.3",
+      "Location": "Iran Khorasan",
+      "Depth": 10,
+      "Notes": "2394 people were killed 2300 were injured 50000 left homeless 10533 houses were destroyed 5474 houses damaged and landslides occurred in the Birjand-Qayen area.",
+      "EventLookup": "1997 Qayen earthquake",
+      "id": 38
+    },
+    {
+      "Year": 1998,
+      "Date": "30-May",
+      "Magnitude": "6.6",
+      "Location": "Afghanistan Takhar",
+      "Depth": 33,
+      "Notes": "At least 4500 people were killed many thousands injured and homeless in Badakhshan and Takhar Provinces.",
+      "EventLookup": "May 1998 Afghanistan earthquake",
+      "id": 39
+    },
+    {
+      "Year": 1999,
+      "Date": "17-Aug",
+      "Magnitude": "7.6",
+      "Location": "Turkey İzmit",
+      "Depth": 17,
+      "Notes": "At least 17127 people died and 50000 were injured. This is the deadliest earthquake in Turkey since 1939.",
+      "EventLookup": "1999 İzmit earthquake",
+      "id": 40
+    },
+    {
+      "Year": 2000,
+      "Date": "04-Jun",
+      "Magnitude": "7.9",
+      "Location": "Indonesia Enggano Island offshore",
+      "Depth": 44,
+      "Notes": "This earthquake killed at least 103 people and injured 2585 others.",
+      "EventLookup": "2000 Enggano earthquake",
+      "id": 41
+    },
+    {
+      "Year": 2001,
+      "Date": "26-Jan",
+      "Magnitude": "7.7",
+      "Location": "India Bhuj",
+      "Depth": 16,
+      "Notes": "20085 people were killed 166800 people were injured and over a million buildings damaged or destroyed this was the 3rd largest earthquake in India since 1900.",
+      "EventLookup": "2001 Gujarat earthquake",
+      "id": 42
+    },
+    {
+      "Year": 2002,
+      "Date": "March 3-25",
+      "Magnitude": "7.4 & 6.1",
+      "Location": "Afghanistan Baghlan Province",
+      "Depth": 8,
+      "Notes": "1166 people were killed and 200 people were injured. A 45 meter wide fissure opened in Xiker Reservoir in Xinjiang China.",
+      "EventLookup": "2002 Hindu Kush earthquakes",
+      "id": 43
+    },
+    {
+      "Year": 2003,
+      "Date": "26-Dec",
+      "Magnitude": "6.6",
+      "Location": "Iran Bam",
+      "Depth": 10,
+      "Notes": "26271 people were killed and 30000 people were injured. The city of Bam was catastrophically impacted with many buildings including the Bam Citadel completely destroyed.",
+      "EventLookup": "2003 Bam earthquake",
+      "id": 44
+    },
+    {
+      "Year": 2004,
+      "Date": "26-Dec",
+      "Magnitude": "9.1",
+      "Location": "Indonesia Sumatra offshore",
+      "Depth": 30,
+      "Notes": "This is the third largest earthquake in the world since 1900 and is the largest since the 1964 Alaska earthquake. In total at least 227898 people were killed many more injured and 1126900 were displaced by the earthquake and subsequent tsunami in 14 countries in South Asia and East Africa.",
+      "EventLookup": "2004 Indian Ocean earthquake",
+      "id": 45
+    },
+    {
+      "Year": 2005,
+      "Date": "08-Oct",
+      "Magnitude": "7.6",
+      "Location": "Pakistan Balakot",
+      "Depth": 15,
+      "Notes": "At least 87351 people killed more than 138000 injured and extensive damage in Pakistan and India. The heaviest damage occurred in the Muzaffarabad area Pakistan where entire villages were destroyed. In addition approximately 250000 farm animals died due to the collapse of stone barns and more than 500000 large animals required immediate shelter from the harsh winter.",
+      "EventLookup": "2005 Kashmir earthquake",
+      "id": 46
+    },
+    {
+      "Year": 2006,
+      "Date": "27-May",
+      "Magnitude": "6.4",
+      "Location": "Indonesia Yogyakarta",
+      "Depth": 10,
+      "Notes": "At least 28903 people were killed 137883 were injured and as many as 779287 people were displaced in the Bantul-Yogyakarta area.[5] More than 127000 houses were destroyed and an additional 451000 were damaged in the area with the total loss estimated at approximately 3.1 billion U.S. dollars.",
+      "EventLookup": "2006 Yogyakarta earthquake",
+      "id": 47
+    },
+    {
+      "Year": 2007,
+      "Date": "15-Aug",
+      "Magnitude": "8",
+      "Location": "Peru Ica offshore",
+      "Depth": 39,
+      "Notes": "At least 519 people killed 1090 injured and more than 39700 buildings damaged or destroyed.",
+      "EventLookup": "2007 Peru earthquake",
+      "id": 48
+    },
+    {
+      "Year": 2008,
+      "Date": "12-May",
+      "Magnitude": "8",
+      "Location": "China Sichuan",
+      "Depth": 19,
+      "Notes": "At least 87587 people killed 374643 injured and 18392 missing and presumed dead. More than 45.5 million people in 10 provinces and regions were affected. At least 15 million people were evacuated from their homes and more than 5 million were left homeless. An estimated 5.36 million buildings collapsed and more than 21 million buildings were damaged. The total economic loss was estimated at 86 billion US dollars.",
+      "EventLookup": "2008 Sichuan earthquake",
+      "id": 49
+    },
+    {
+      "Year": 2009,
+      "Date": "30-Sep",
+      "Magnitude": "7.6",
+      "Location": "Indonesia Padang offshore",
+      "Depth": 90,
+      "Notes": "At least 1115 people killed 2181 injured 181665 buildings destroyed or damaged and about 451000 people displaced in Padang. Damage estimated at 2.3 billion U.S. dollars.",
+      "EventLookup": "2009 Sumatra earthquake",
+      "id": 50
+    },
+    {
+      "Year": 2010,
+      "Date": "12-Jan",
+      "Magnitude": "7",
+      "Location": "Haiti Léogâne",
+      "Depth": 13,
+      "Notes": "The earthquake killed between 92000 and 316000 people and injured 300000. With 1.3 million displaced 97294 houses were destroyed and 188383 were damaged in the Port-au-Prince area and in much of southern Haiti.",
+      "EventLookup": "2010 Haiti earthquake",
+      "id": 51
+    },
+    {
+      "Year": 2011,
+      "Date": "11-Mar",
+      "Magnitude": "9.1",
+      "Location": "Japan Sendai offshore",
+      "Depth": 29,
+      "Notes": "At least 19747 people killed 2556 missing 6242 injured 130927 displaced and at least 332395 buildings 2126 roads 56 bridges and 26 railways destroyed or damaged by the earthquake and tsunami along the entire east coast of Honshu from Chiba to Aomori.",
+      "EventLookup": "2011 Tōhoku earthquake and tsunami",
+      "id": 52
+    },
+    {
+      "Year": 2012,
+      "Date": "11-Aug",
+      "Magnitude": "6.4",
+      "Location": "Iran East Azerbaijan",
+      "Depth": 9,
+      "Notes": "At least 306 people killed 3037 injured 4 villages destroyed and 60 heavily damaged in the epicentral area",
+      "EventLookup": "2012 East Azerbaijan earthquakes",
+      "id": 53
+    },
+    {
+      "Year": 2013,
+      "Date": "24-Sep",
+      "Magnitude": "7.7",
+      "Location": "Pakistan Balochistan",
+      "Depth": 15,
+      "Notes": "At least 825 people killed 700 people were injured and 21000 houses destroyed or damaged in Balochistan",
+      "EventLookup": "2013 Balochistan earthquakes",
+      "id": 54
+    },
+    {
+      "Year": 2014,
+      "Date": "03-Aug",
+      "Magnitude": "6.2",
+      "Location": "China Ludian County",
+      "Depth": 10,
+      "Notes": "At least 729 people killed 3143 injured and 42000 houses damaged or destroyed.",
+      "EventLookup": "2014 Ludian earthquake",
+      "id": 55
+    },
+    {
+      "Year": 2015,
+      "Date": "25-Apr",
+      "Magnitude": "7.8",
+      "Location": "Nepal Gorkha District",
+      "Depth": 8.2,
+      "Notes": "At least 9182 people killed 25482 injured and 769817 houses damaged or destroyed in Nepal in this earthquake and the M 7.3 aftershock on May 12.",
+      "EventLookup": "April 2015 Nepal earthquake",
+      "id": 56
+    },
+    {
+      "Year": 2016,
+      "Date": "16-Apr",
+      "Magnitude": "7.8",
+      "Location": "Ecuador Esmeraldas",
+      "Depth": 20.6,
+      "Notes": "At least 676 people killed 27732 injured and 7000 buildings damaged or destroyed including most of the town of Pedernales and its surrounding urban areas.",
+      "EventLookup": "2016 Ecuador earthquake",
+      "id": 57
+    },
+    {
+      "Year": 2017,
+      "Date": "12-Nov",
+      "Magnitude": "7.3",
+      "Location": "Iran-Iraq border Region",
+      "Depth": 19,
+      "Notes": "At least 630 people killed more than 8100 injured 70000 displaced 12000 buildings destroyed and 15000 buildings damaged.",
+      "EventLookup": "2017 Iran-Iraq earthquake",
+      "id": 58
+    },
+    {
+      "Year": 2018,
+      "Date": "28-Sep",
+      "Magnitude": "7.5",
+      "Notes": "At least 2248 people killed 12763 people were injured and 136800 buildings destroyed in Les Cayes",
+      "EventLookup": "2021 Haiti earthquake",
+      "id": 62
+    },
+    {
+      "Year": 2022,
+      "Date": "21-Jun",
+      "Magnitude": "6",
+      "Location": "Afghanistan Khost",
+      "Depth": 10,
+      "Notes": "At least 1163 people were killed and 6027 others injured. Many homes were destroyed.",
+      "EventLookup": "June 2022 Afghanistan earthquake",
+      "id": 63
+    }
+  ]
+}

@@ -16,7 +16,7 @@ const typeDefs = gql`
   type Earthquake {
     _id: ID
     username: String
-    Date: DateScalar
+    Date: String
     Latitude: Float
     Longitude: Float
     Magnitude: Float
