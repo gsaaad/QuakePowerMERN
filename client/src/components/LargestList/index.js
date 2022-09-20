@@ -10,7 +10,7 @@ const LargestList = ({ earthquakes, title }) => {
       <h3>{title}</h3>
       {earthquakes &&
         earthquakes.map((earthquake) => (
-          <div key={earthquake.Date} className="card mb-3">
+          <div key={earthquake.Year} className="card mb-3">
             <div className="card-body">
               <p>Earthquake ID: {earthquake.id}</p>
               <p>
@@ -25,7 +25,9 @@ const LargestList = ({ earthquakes, title }) => {
               <p>Region: {earthquake.Region}</p>
               <p>Depth:{earthquake.Depth}</p>
               <p>
-                <b>Notes:{earthquake.Notes}</b>
+                <b>
+                  Notes:{earthquake.Notes != "-" ? earthquake.Notes : "None"}
+                </b>
               </p>
             </div>
           </div>
