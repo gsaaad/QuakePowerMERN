@@ -1,17 +1,17 @@
 import React from "react";
-import Earthquakes from "../data/deadliest.json";
-import DeadliestList from "../components/DeadliestList/index";
+import Earthquakes from "../data/largest.json";
+import LargestList from "../components/LargestList/index";
 const Largest = () => {
-  const deadliestEarthquakes = Earthquakes.deadliest;
+  const deadliestEarthquakes = Earthquakes.largest;
   console.log(deadliestEarthquakes);
 
   return (
     <main>
       <div className="flex-row justify-space-between">
         <div id="display-area">
-          <DeadliestList
+          <LargestList
             earthquakes={deadliestEarthquakes}
-            title="Deadliest Earthquakes recorded!"
+            title="Checkout the largest Earthquakes recorded!"
           />
         </div>
         {/* <div className={`col-12 mb-3 ${loggedIn && "col-lg-8"}`}></div> */}
