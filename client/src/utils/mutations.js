@@ -22,41 +22,6 @@ export const ADD_USER = gql`
     }
   }
 `;
-
-// export const ADD_EARTHQUAKE = gql`
-//   mutation addEarthquake(
-//     $username: String!
-//     $earthquakeDate: String!
-//     $earthquakeDepth: String!
-//     $earthquakeMagnitude: String!
-//     $earthquakeLatitude: String!
-//     $earthquakeLongitude: String!
-//     $earthquakeRegion: String!
-//   ) {
-//     addEarthquake(
-//       username: $username
-//       earthquakeDate: $earthquakeDate
-//       earthquakeDepth: $earthquakeDepth
-//       earthquakeMagnitude: $earthquakeMagnitude
-//       earthquakeLatitude: $earthquakeLatitude
-//       earthquakeLongitude: $earthquakeLongitude
-//       earthquakeRegion: $earthquakeRegion
-//     ) {
-//       _id
-//       username
-//       Date
-//       Depth
-//       Magnitude
-//       Latitude
-//       Longitude
-//       Region
-//       reactionCount
-//       reactions {
-//         _id
-//       }
-//     }
-//   }
-// `;
 export const ADD_EARTHQUAKE = gql`
   mutation addEarthquake(
     $username: String!

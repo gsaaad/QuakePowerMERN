@@ -63,6 +63,30 @@ const EarthquakeForm = () => {
         variables: { ...formState },
       });
       console.log("Successfull Earthquake Entry!");
+      Store.addNotification({
+        title: "Success!",
+        message: "Adding an earthquake was a success!",
+        type: "success",
+        insert: "top",
+        container: "center",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: true,
+        },
+        width: 700,
+      });
+      // clear form values
+      setFormState({
+        username: username,
+        Date: "",
+        Latitude: "",
+        Longitude: "",
+        Depth: "",
+        Magnitude: "",
+        Region: "",
+      });
     } catch (e) {
       console.error(e);
       console.log("There is a problem with adding an earthquake.. Try again!");

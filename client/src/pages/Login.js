@@ -4,7 +4,7 @@ import { Store } from "react-notifications-component";
 import Auth from "../utils/authenticate";
 
 import { LOGIN_USER } from "../utils/mutations";
-const Login = (props) => {
+const Login = () => {
   const [formState, setFormState] = useState({ email: "", password: "" });
 
   const [login, { error }] = useMutation(LOGIN_USER);
