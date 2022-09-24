@@ -3,6 +3,9 @@ import ReactionList from "../components/ReactionList";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_EARTHQUAKE } from "../utils/queries";
+import Auth from "../utils/authenticate";
+
+import ReactionForm from "../components/ReactionForm";
 
 const SingleEarthquake = (props) => {
   const { id: earthquakeId } = useParams();
@@ -43,6 +46,7 @@ const SingleEarthquake = (props) => {
       {earthquake.reactionCount > 0 && (
         <ReactionList reactions={earthquake.reactions} />
       )}
+      {Auth.loggedIn() && <ReactionForm earthquakeId={earthquake._id} />}
     </div>
   );
 };

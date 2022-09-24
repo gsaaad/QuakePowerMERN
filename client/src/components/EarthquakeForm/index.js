@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_EARTHQUAKE } from "../../utils/mutations";
 import { Store } from "react-notifications-component";
+import { QUERY_EARTHQUAKES, QUERY_ME } from "../../utils/queries";
 
 const EarthquakeForm = () => {
   const [formState, setFormState] = useState({
@@ -13,7 +14,29 @@ const EarthquakeForm = () => {
     Region: "",
   });
 
-  const [addEarthquake, { error }] = useMutation(ADD_EARTHQUAKE);
+  const [addEarthquake, { error }] = useMutation(ADD_EARTHQUAKE, {
+    update(cache, { data: { addEarthquake } }) {
+      try {
+        // update me array's cache
+        const { me } = cache.readQuery({ query: QUERY_ME });
+        cache.writeQuery({
+          query: QUERY_ME,
+          data: {
+            me: { ...me, earthquakes: [...me.earthquakes, addEarthquake] },
+          },
+        });
+      } catch (e) {
+        console.warn("earthquake insertion by user");
+      }
+
+      // update array cache
+      const { earthquakes } = cache.readQuery({ query: QUERY_EARTHQUAKES });
+      cache.writeQuery({
+        query: QUERY_EARTHQUAKES,
+        data: { earthquakes: [addEarthquake, ...earthquakes] },
+      });
+    },
+  });
 
   //   update state based on form input to add earthquake
   const handleChange = (e) => {

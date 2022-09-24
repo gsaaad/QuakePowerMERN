@@ -22,34 +22,27 @@ export const ADD_USER = gql`
     }
   }
 `;
+
 export const ADD_EARTHQUAKE = gql`
   mutation addEarthquake(
-    $Date: String!
-    $Latitude: String!
-    $Longitude: String!
-    $Depth: String!
-    $Magnitude: String!
-    $Region: String!
+    $earthquakeDate: String!
+    $earthquakeDepth: String!
+    $earthquakeMagnitude: String!
+    $earthquakeLatitude: String!
+    $earthquakeLongitude: String!
+    $earthquakeRegion: String!
   ) {
-    addEarthquake(
-      Date: $Date
-      Latitude: $Latitude
-      Longitude: $Longitude
-      Depth: $Depth
-      Magnitude: $Magnitude
-      Region: $Region
-    ) {
+    _id
+    username
+    Date
+    Depth
+    Magnitude
+    Latitude
+    Longitude
+    Region
+    reactionCount
+    reactions {
       _id
-      Date
-      Latitude
-      Longitide
-      Depth
-      Magnitude
-      Region
-      reactionCount
-      reaction {
-        _id
-      }
     }
   }
 `;
