@@ -27,6 +27,25 @@ const ReactionForm = ({ earthquakeId }) => {
       await addReaction({
         variables: { ...formState },
       });
+      console.log(`Successful Reaction Entry to earthquake: ${earthquakeId}`);
+      Store.addNotification({
+        title: "Success!",
+        message: "Reaction was added successfully!",
+        type: "success",
+        insert: "top",
+        container: "center",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: true,
+        },
+        width: 700,
+      });
+      setFormState({
+        earthquakeId: earthquakeId,
+        reactionBody: "",
+      });
     } catch (e) {
       console.error(e);
       console.log(

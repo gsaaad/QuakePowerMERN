@@ -57,8 +57,8 @@ export const ADD_EARTHQUAKE = gql`
   }
 `;
 export const ADD_REACTION = gql`
-  mutation addReaction($thoughtId: ID!, $reactionBody: String!) {
-    addReaction(thoughtId: $thoughtId, reactionBody: $reactionBody) {
+  mutation addReaction($earthquakeId: ID!, $reactionBody: String!) {
+    addReaction(earthquakeId: $earthquakeId, reactionBody: $reactionBody) {
       _id
       reactionCount
       reactions {
