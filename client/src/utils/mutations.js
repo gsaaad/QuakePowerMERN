@@ -32,17 +32,40 @@ export const ADD_EARTHQUAKE = gql`
     $earthquakeLongitude: String!
     $earthquakeRegion: String!
   ) {
-    _id
-    username
-    Date
-    Depth
-    Magnitude
-    Latitude
-    Longitude
-    Region
-    reactionCount
-    reactions {
+    addEarthquake(
+      earthquakeDate: $earthquakeDate
+      earthquakeDepth: $earthquakeDepth
+      earthquakeMagnitude: $earthquakeMagnitude
+      earthquakeLatitude: $earthquakeLatitude
+      earthquakeLongitude: $earthquakeLongitude
+      earthquakeRegion: $earthquakeRegion
+    ) {
       _id
+      username
+      Date
+      Depth
+      Magnitude
+      Latitude
+      Longitude
+      Region
+      reactionCount
+      reactions {
+        _id
+      }
+    }
+  }
+`;
+export const ADD_REACTION = gql`
+  mutation addReaction($thoughtId: ID!, $reactionBody: String!) {
+    addReaction(thoughtId: $thoughtId, reactionBody: $reactionBody) {
+      _id
+      reactionCount
+      reactions {
+        _id
+        reactionBody
+        createdAt
+        username
+      }
     }
   }
 `;
