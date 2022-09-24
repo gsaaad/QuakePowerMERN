@@ -3,9 +3,13 @@ import { useMutation } from "@apollo/client";
 import { ADD_EARTHQUAKE } from "../../utils/mutations";
 import { Store } from "react-notifications-component";
 import { QUERY_EARTHQUAKES, QUERY_ME } from "../../utils/queries";
+import Auth from "../../utils/authenticate";
+
+var username = Auth.getProfile().data.username;
 
 const EarthquakeForm = () => {
   const [formState, setFormState] = useState({
+    username: username,
     Date: "",
     Latitude: "",
     Longitude: "",

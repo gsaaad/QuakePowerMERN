@@ -48,10 +48,11 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     addEarthquake(
       username: String!
-      Latitude: Float!
-      Longitude: Float!
-      Depth: Int!
-      Magnitude: Float!
+      Date: String!
+      Latitude: String!
+      Longitude: String!
+      Depth: String!
+      Magnitude: String!
       Region: String!
     ): Earthquake
     addReaction(earthquakeId: ID!, reactionBody: String!): Earthquake

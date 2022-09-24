@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_REACTION } from "../../utils/mutations";
+import { Store } from "react-notifications-component";
 const ReactionForm = ({ earthquakeId }) => {
   const [formState, setFormState] = useState({
     earthquakeId: earthquakeId,
     reactionBody: "",
   });
 
+  const [addReaction, { error }] = useMutation(ADD_REACTION);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
 
     setFormState({
       ...formState,
@@ -17,9 +19,20 @@ const ReactionForm = ({ earthquakeId }) => {
     });
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log(formState);
+
+    try {
+      // add reaction
+      await addReaction({
+        variables: { ...formState },
+      });
+    } catch (e) {
+      console.error(e);
+      console.log(
+        `There was a problem with adding a reaction to this Earthquake, ID:${earthquakeId} Try again!`
+      );
+    }
   };
   return (
     <div>
@@ -42,6 +55,28 @@ const ReactionForm = ({ earthquakeId }) => {
           Submit
         </button>
       </form>
+      {error &&
+        (Store.addNotification({
+          title: "Warning!",
+          message:
+            "We are currently aware of this issue, and are working on it! Thank you.",
+          type: "warning",
+          insert: "bottom",
+          container: "center",
+          animationIn: ["animate__animated", "animate__fadeIn"],
+          animationOut: ["animate__animated", "animate__fadeOut"],
+          dismiss: {
+            duration: 5000,
+            onScreen: true,
+          },
+          width: 700,
+        }),
+        (
+          <div>
+            There was a problem with adding a reaction to this Earthquake, ID:{" "}
+            {earthquakeId} Try again!
+          </div>
+        ))}
     </div>
   );
 };

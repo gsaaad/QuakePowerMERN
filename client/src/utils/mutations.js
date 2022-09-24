@@ -23,30 +23,66 @@ export const ADD_USER = gql`
   }
 `;
 
+// export const ADD_EARTHQUAKE = gql`
+//   mutation addEarthquake(
+//     $username: String!
+//     $earthquakeDate: String!
+//     $earthquakeDepth: String!
+//     $earthquakeMagnitude: String!
+//     $earthquakeLatitude: String!
+//     $earthquakeLongitude: String!
+//     $earthquakeRegion: String!
+//   ) {
+//     addEarthquake(
+//       username: $username
+//       earthquakeDate: $earthquakeDate
+//       earthquakeDepth: $earthquakeDepth
+//       earthquakeMagnitude: $earthquakeMagnitude
+//       earthquakeLatitude: $earthquakeLatitude
+//       earthquakeLongitude: $earthquakeLongitude
+//       earthquakeRegion: $earthquakeRegion
+//     ) {
+//       _id
+//       username
+//       Date
+//       Depth
+//       Magnitude
+//       Latitude
+//       Longitude
+//       Region
+//       reactionCount
+//       reactions {
+//         _id
+//       }
+//     }
+//   }
+// `;
 export const ADD_EARTHQUAKE = gql`
   mutation addEarthquake(
-    $earthquakeDate: String!
-    $earthquakeDepth: String!
-    $earthquakeMagnitude: String!
-    $earthquakeLatitude: String!
-    $earthquakeLongitude: String!
-    $earthquakeRegion: String!
+    $username: String!
+    $Date: String!
+    $Latitude: String!
+    $Longitude: String!
+    $Depth: String!
+    $Magnitude: String!
+    $Region: String!
   ) {
     addEarthquake(
-      earthquakeDate: $earthquakeDate
-      earthquakeDepth: $earthquakeDepth
-      earthquakeMagnitude: $earthquakeMagnitude
-      earthquakeLatitude: $earthquakeLatitude
-      earthquakeLongitude: $earthquakeLongitude
-      earthquakeRegion: $earthquakeRegion
+      username: $username
+      Date: $Date
+      Depth: $Depth
+      Latitude: $Latitude
+      Longitude: $Longitude
+      Magnitude: $Magnitude
+      Region: $Region
     ) {
       _id
       username
       Date
       Depth
-      Magnitude
       Latitude
       Longitude
+      Magnitude
       Region
       reactionCount
       reactions {
