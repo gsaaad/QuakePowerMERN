@@ -30,17 +30,17 @@ const startApolloServer = async () => {
   server.applyMiddleware({ app });
 };
 
-// server up statis assets
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/build")));
-}
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+// server up static assets
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "../client/build")));
+// }
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+// });
 
 dbConnection.on("error", console.error.bind(console, "connection error!"));
 dbConnection.once("open", () => {
-  console.log("Connection good!, server run!");
+  console.log("DB Connection good!");
   app.listen(PORT, () => {
     console.log(`server running on ${PORT}`);
     // log where we can go (test GQL API)
