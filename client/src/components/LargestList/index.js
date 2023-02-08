@@ -26,7 +26,7 @@ const LargestList = ({ earthquakes, title }) => {
               <p>Depth:{earthquake.Depth}</p>
               <p>
                 <b>
-                  Notes:{earthquake.Notes != "-" ? earthquake.Notes : "None"}
+                  Notes:{earthquake.Notes !== "-" ? earthquake.Notes : "None"}
                 </b>
               </p>
             </div>
