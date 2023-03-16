@@ -19,7 +19,7 @@ const MyProfile = () => {
   //     variables: { username: userParam },
   //   });
 
-  //   const user = data?.user || {};
+  // const user = data?.user || {};
 
   //   if (loading) {
   //     return <div>Loading...</div>;

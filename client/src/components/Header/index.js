@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Auth from "../../utils/authenticate";
 const Header = () => {
+  console.log("IS USER LOGGED IN?", Auth.loggedIn());
   // logout function
   const logout = (e) => {
     e.preventDefault();

@@ -28,13 +28,17 @@ const httpLink = createHttpLink({
 });
 // authLink
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem("id_token");
-  return {
-    headers: {
-      ...headers,
-      authorization: token ? `Bearer ${token}` : ``,
-    },
-  };
+  if (localStorage.length > 0) {
+    const token = localStorage.getItem("id_token");
+    return {
+      headers: {
+        ...headers,
+        authorization: token ? `Bearer ${token}` : ``,
+      },
+    };
+  } else {
+    return false;
+  }
 });
 
 // client combines httpLink (domain), and authenticationLink with token
