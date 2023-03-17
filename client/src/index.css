@@ -142,6 +142,15 @@ nav a:hover {
   display: inline;
 }
 
+.grid-container {
+  display: flex;
+}
+.grid-container > .card-body {
+  width: 66%;
+}
+.grid-container > .featured-map {
+  width: 34%;
+}
 /* CARDS */
 .card {
   margin: 0 0 20px 0;
