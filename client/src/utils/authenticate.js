@@ -7,7 +7,7 @@ const formatSeconds = (seconds) => {
   const remainingSeconds = seconds % 60;
   const paddedSeconds =
     remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds;
-  return `${minutes}:${paddedSeconds}`;
+  return `${minutes} mins & ${paddedSeconds} seconds `;
 };
 
 class AuthService {
@@ -15,11 +15,15 @@ class AuthService {
 
   getProfile() {
     // console.log("getting profile");
-    // console.log("THIS IS THE OKEN", this.getToken());
-    const decodedToken = decode(this.getToken());
-    console.log("decoded token", decodedToken);
-    return decodedToken;
-    // return decodedToken
+    console.log("THIS IS THE OKEN", !!this.getToken());
+    const profileToken = this.getToken();
+
+    if (!!profileToken) {
+      const decodedToken = decode(this.getToken());
+      console.log("decoded token", decodedToken);
+      return decodedToken;
+    }
+    return false;
   }
 
   //   check if user still loggedin
@@ -27,9 +31,9 @@ class AuthService {
   loggedIn() {
     // check token
     const token = this.getToken();
-    console.log("LOGGED IN?", !!token);
+    console.log("DO WE HAVE A TOKEN", !!token);
     console.log("IS EXPIRED?", this.isTokenExpired(token));
-    console.log("TOTAL EXPRESSION", !!token && this.isTokenExpired(token));
+    console.log("TOTAL EXPRESSION", token && this.isTokenExpired(token));
 
     // use type coersion, not undefined, and not expired!
     return !!token && this.isTokenExpired(token);
@@ -42,14 +46,16 @@ class AuthService {
     console.log("LENGTH OF EXP", decodedExp);
     // time, milliseconds/1000, now in seconds
     const timeNow = Math.round(Date.now() / 1000);
+    console.log("TIME NOW", timeNow);
     const timeDiff = timeNow - decodedExp;
-    console.log("TIME DIFFERENCE IS...", Math.abs(timeDiff));
+    console.log("TIME DIFFERENCE IS...", timeDiff);
     console.log("or formatted", formatSeconds(Math.abs(timeDiff)));
-    if (timeDiff > 0) {
-      return false;
-    } else {
+    if (timeDiff < 0) {
       return true;
+    } else {
+      return false;
     }
+    // ! return true;
     // try {
     //   const decoded = decode(token);
 
@@ -62,21 +68,17 @@ class AuthService {
     //   console.error(e);
     //   return false;
     // }
-    // return true;
   }
 
   getToken() {
     // token from localstorage
     const getToken = localStorage.getItem("id_token");
-    // if (!getToken) {
-    //   // console.log("token is not recieved..", !getToken);
-    //   console.log("token was not recieved... sending GENERAL USER");
-    //   return "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdDEyMyIsImVtYWlsIjoidGVzdDEyM0BsaXZlLmNvbSIsIl9pZCI6IjYzZTJmMjUxMDNkYTE5NTU5Y2ViODU3ZSJ9LCJpYXQiOjE2NzkwMDM1ODIsImV4cCI6MTY3OTAyMTU4Mn0.HXfNFTB2vs6pz1eV3HpB3AJZ4aMAx9MeiLcbeqeLRGM";
-    // }
     if (!getToken) {
-      // Handle the error
-      console.error("Could not obtain token");
+      console.log("token was not recieved... problem starts here");
+      // return "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdDEyMyIsImVtYWlsIjoidGVzdDEyM0BsaXZlLmNvbSIsIl9pZCI6IjYzZTJmMjUxMDNkYTE5NTU5Y2ViODU3ZSJ9LCJpYXQiOjEuNjc5MDIxNTgyZSsyMSwiZXhwIjoxLjY3OTAyMTU4MmUrMjF9.IArMZRHGGtY7Q7QLVpOqIVnTtxDU2wQo8OfzwhLvfsw";
+      return "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidGVzdDEyMyIsImVtYWlsIjoidGVzdDEyM0BsaXZlLmNvbSIsIl9pZCI6IjYzZTJmMjUxMDNkYTE5NTU5Y2ViODU3ZSJ9LCJpYXQiOjE1LCJleHAiOjE1fQ.k6gnsgz9VZfDDv5hqTDKQCCaw4-YIs5dnGF4NDUsOBg";
     }
+
     return localStorage.getItem("id_token");
   }
 

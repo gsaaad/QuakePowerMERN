@@ -1,7 +1,8 @@
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const tripleSecret = process.env.tripleSecret;
-const expiration = "5h";
+// user can be online for 20 minutes!
+const expiration = "20m";
 
 module.exports = {
   signToken: function ({ username, email, _id }) {

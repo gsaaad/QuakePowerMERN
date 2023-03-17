@@ -5,7 +5,12 @@ import { Store } from "react-notifications-component";
 import { QUERY_EARTHQUAKES, QUERY_ME } from "../../utils/queries";
 import Auth from "../../utils/authenticate";
 
-var username = Auth.getProfile().data.username;
+var username = "";
+console.log("AUTH PROFILE", Auth.getProfile());
+if (Auth.getProfile()) {
+  username = Auth.getProfile().data.username;
+}
+console.log("USERNAME", username);
 
 const EarthquakeForm = () => {
   const [formState, setFormState] = useState({
