@@ -5,7 +5,7 @@ export const QUERY_EARTHQUAKES = gql`
     earthquakes(username: $username) {
       _id
       username
-      Date
+      earthquakeDate
       Depth
       Magnitude
       Latitude
@@ -26,7 +26,7 @@ export const QUERY_EARTHQUAKE = gql`
     earthquake(_id: $id) {
       _id
       username
-      Date
+      earthquakeDate
       Depth
       Magnitude
       Latitude
@@ -51,7 +51,7 @@ export const QUERY_USER = gql`
       earthquakes {
         _id
         username
-        Date
+        earthquakeDate
         Latitude
         Longitude
         Magnitude

@@ -8,11 +8,11 @@ const earthquakeSchema = new Schema(
       type: String,
       // required: true,
     },
-    Date: {
+    earthquakeDate: {
       type: Date,
       get: (timestamp) => dateFormat(timestamp),
-      lowercase: true,
-      trim: true,
+      // lowercase: true,
+      // trim: true,
       // required: "You need to leave a date!",
     },
     Latitude: {

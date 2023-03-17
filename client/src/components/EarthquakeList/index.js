@@ -25,7 +25,7 @@ const EarthquakeList = ({ earthquakes, title }) => {
             </p>
             <div className="card-body">
               <Link to={`/earthquake/${earthquake._id}`}>
-                <p>Date:{earthquake.Date}</p>
+                <p>Date:{earthquake.earthquakeDate}</p>
                 <p>Magnitude:{earthquake.Magnitude}</p>
                 <p>Latitude:{earthquake.Latitude}</p>
                 <p>Longitude:{earthquake.Longitude}</p>

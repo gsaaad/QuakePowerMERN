@@ -25,7 +25,7 @@ export const ADD_USER = gql`
 export const ADD_EARTHQUAKE = gql`
   mutation addEarthquake(
     $username: String!
-    $Date: String!
+    $earthquakeDate: String!
     $Latitude: String!
     $Longitude: String!
     $Depth: String!
@@ -34,7 +34,7 @@ export const ADD_EARTHQUAKE = gql`
   ) {
     addEarthquake(
       username: $username
-      Date: $Date
+      earthquakeDate: $earthquakeDate
       Depth: $Depth
       Latitude: $Latitude
       Longitude: $Longitude
@@ -43,7 +43,7 @@ export const ADD_EARTHQUAKE = gql`
     ) {
       _id
       username
-      Date
+      earthquakeDate
       Depth
       Latitude
       Longitude

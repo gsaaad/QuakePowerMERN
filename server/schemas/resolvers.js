@@ -6,7 +6,7 @@ const { signToken } = require("../utils/authenticateUser");
 
 const resolvers = {
   // query
-  DateScalar: DateScalar,
+  CustomDate: DateScalar,
   Query: {
     // logging in with Auth
     me: async (parent, args, context) => {

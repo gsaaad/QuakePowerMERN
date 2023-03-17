@@ -4,7 +4,7 @@ const { gql } = require("apollo-server-express");
 
 // const typeDefs = gql``;
 const typeDefs = gql`
-  scalar DateScalar
+  scalar CustomDate
 
   type User {
     _id: ID
@@ -16,7 +16,7 @@ const typeDefs = gql`
   type Earthquake {
     _id: ID
     username: String
-    Date: String
+    earthquakeDate: CustomDate
     Latitude: Float
     Longitude: Float
     Magnitude: Float
